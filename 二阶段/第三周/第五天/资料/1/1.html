@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 15.59;
+        document.write(Math.round(a));
+        "hello".repeat(3)
+        var arr = [typeof x,typeof y]; var x = arr[1]; alert(typeof x);
+        var str = "abcdefagd";var index = str.indexOf("ad");document.write(index)
+        var str; alert(typeof str)
+        function func1(){ alert(b) }
+        func1(
+        )
+
+
+
+
+        function count(arr){
+            var newArr = [];
+            for(var i = 0; i<arr.length; i++){
+                if(newArr.indexOf(arr[i])==-1){
+                    newArr.push(arr[i]);
+                }
+            }
+            //本地排序（去重后）
+            newArr.sort(function(a,b){
+                return a-b;
+            });
+            return newArr;
+        }
+
+    
+    </script>
+    
+</body>
+</html>

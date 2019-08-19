@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="but">参与抽奖</button>
+    <script>
+        var oBut = document.getElementById("but");
+        oBut.onclick = function () {
+            var arr  = ["iphone", "mac", "路由器", "精美图书", "矿泉水一瓶", "1比特币", "谢谢惠顾", "酸奶一瓶", ]
+            var min  = 0;
+            var max  = arr.length - 1;
+            var index = parseInt(Math.random() * (max - min + 1)) + min;
+            
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+       
+        <title>Document</title>
+    </head>
+    <body>
+            <!-- 003-叠数求和
+  *     输入两个数n，a
+  *     如输入的是 n=3， a=2；则输出 2 + 22 + 222 的值。
+			  如输入的是 n=4， a=3；输出 3 + 33 + 333 + 3333的值。
+			  提示:
+			    + n = 3,相加三次,每次相加比前一次相加的数,多一位
+                + 每次多的这个位数的值为a, 如果a为2则 2*10+2, 22*10+2 -->
+                <input type="text" id="input1" placeholder="输入n值">
+                <input type="text" id="input2" placeholder="输入a值">
+                <button id="but">=</button>
+            
+         <script>
+             var oBut = document.getElementById("but");
+             oBut.onclick  = function(){
+                 var oIpt1 = document.getElementById("input1");
+                 var oIpt2 = document.getElementById("input2");
+                 var a     = oIpt2.value*1;
+                 var n     = oIpt1.value*1;
+                 var result = 0;
+                 var c      = 0;
+                  for (var i = 1;i <= n; i++ ){
+                    if(i == 1){
+                        result = a;
+                    }
+                    else{
+                        result = result*10 + a;
+                    }
+                    c = c + result
+                 }
+                 console.log(c);
+             }
+         
+         
+         </script>
+    </body>
+    </html>

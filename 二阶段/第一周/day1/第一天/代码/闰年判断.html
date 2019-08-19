@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputID">
+    <button id="but">判断</button>
+    <div id="div">您输入的年份是：</div>
+    <script>
+        var oInput = Number(document.getElementById("inputID"));
+        var oBut   = document.getElementById("but");
+        var oDiv   = document.getElementById("div");
+        oBut.onclick = function(){
+            if(oInput % 4 == 0 && oInput % 100 != 0 || oInput % 400 ==0){
+                console.log("闰年")
+            
+            }
+            else{
+                console.log("平年")
+              }
+            
+        
+    </script>
+    
+</body>
+</html>

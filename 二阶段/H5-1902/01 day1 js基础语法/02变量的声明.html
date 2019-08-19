@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>变量的声明</title>
+		<script type="text/javascript">
+		
+			//声明变量
+			var a = 9;
+//			alert(a);//弹窗
+			console.log(a);//打印控制台，检测代码
+			
+			//自查方法：一定要自查
+//			console.log(333);//显示了：说明代码1有问题
+//			代码1;
+//			console.log(222);//这里也不显示
+//			代码2;
+//			console.log(111);//这句话也不显示
+//			代码3;//这里不显示：说明以上代码有报错
+			
+			
+			//注释
+			/*多行注释*/
+			
+			//变量声明几种形式
+			
+			var num;//声明
+			num = 88;//赋值:把右边的内容放到左边的变量里面，先看右边
+			num = 99;//被覆盖：说明变量只能一次存一个数
+			console.log(num);
+			
+			//建议写成这种：声明就马上赋值
+			var sum = 123;//声明+赋值
+			
+			var n1 = n2 = n3 = 345;//声明多个变量
+			
+			/*
+			 JS变量的命名规范
+				-变量名必须是数字,字母,下划线_和美元符$组成;
+				-第一个字符不能为数字
+				-不能使用关键字或保留字
+			 */
+			
+			$aa 合法
+			*nn 不合法,非法字符
+			7num 不合法,不能数字开头
+			class :不合法,保留字
+			var :不合法,关键字
+			_num :可以
+			
+			//驼峰命名法：第二个单词开始首先字母大写
+			var loginDiv = document.getElementById('login');
+			var menuList = document.getElementById('menu_list');
+			
+			//登陆框：Login Modal Box 英文命名
+			var loginModalBox 
+			var dengLuGuang
+			var dlk //杜绝这种命名
+			
+			//代码缩进
+			
+			符号
+			
+			     数学              代码
+			()   小括号         圆括号:写分号
+			[]   中括号        方括号:写分号
+			{}   大括号        花括号:遇到花括号的时候换行,缩进,末尾不需要写分号
+			
+			function sum() { //基础但是重要
+				//缩进：tab键
+				function num() {
+					//代码这里开始
+				}
+			}
+			
+			
+			function sun() { //缩进样式
+				function max() {
+					function ll()  {
+					      	
+					}
+				}
+			}
+			
+			
+			//留空格
+			var num=99;//不规范
+			var num = 99;//规范
+			
+			for(var i=0;i<10;i++){
+				//不规范写法
+			}
+			//规范写法
+			for(var i = 0; i < 10; i ++) {
+				
+			}
+			
+			function sum(){
+				//不规范
+			}
+			function sum() {
+				//规范写法
+			}
+		</script>
+	</head>
+	<body>
+		<div id="login">
+			
+		</div>
+		<ul id="menu_list">
+			<li class="mm">
+				
+			</li>
+		</ul>
+	</body>
+</html>

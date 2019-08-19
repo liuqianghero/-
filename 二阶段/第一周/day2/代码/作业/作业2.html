@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="身高" id="ipt1">
+    <input type="text" placeholder="体重" id="ipt2">
+    <button id="btn">判断</button>
+    <script>
+        var oIpt1 = document.getElementById("ipt1");
+        var oIpt2 = document.getElementById("ipt2");
+
+        var oBut = document.getElementById("btn");
+        // var jieguo = Number(result);
+        // var tiZhong = Number(oIpt2);
+        var res = "";
+        oBut.onclick = function () {
+            var _oIpt1 = oIpt1.value;
+            var _oIpt2 = oIpt2.value;
+            var result = (_oIpt1 - 108) * 2;
+            if (oIpt2 == result) {
+                res = "完美身材，你可以当健身教练了";
+            } else if (_oIpt2 >= Number(result + 10)) {
+                res = "哈哈，胖纸，你能不能少吃点"
+            } else if (_oIpt2 <= result - 10) {
+                res = "小可爱，你太瘦了，多吃肉能不能少吃点"
+            } else {
+                res = "你的身材还行，继续保持";
+            }
+
+            var oDiv = document.createElement("div");
+            document.body.appendChild(oDiv);
+            oDiv.innerHTML = res;
+        }
+    </script>
+
+</body>
+
+</html>

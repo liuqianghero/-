@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        ul {
+            margin: 50px auto;
+            width: 700px;
+            height: 170px;
+            box-sizing: border-box;
+        }
+
+        li {
+            float: left;
+            margin-left: 3px;
+            width: 170px;
+            height: 170px;
+            border: 1px solid;
+        }
+
+        .hezi {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+        }
+
+        .picture {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><img src="src/shirt_1.jpg" alt=""></li>
+        <li><img src="src/shirt_2.jpg" alt=""></li>
+        <li><img src="src/shirt_3.jpg" alt=""></li>
+        <li><img src="src/shirt_4.jpg" alt=""></li>
+    </ul>
+    <div class="hezi"><img src="src/shirt_1_big.jpg" alt="" class="picture"></div>
+    <script>
+        window.onload = function () {
+            var li = document.getElementsByTagName("li");
+            var picture = document.getElementsByClassName("picture")[0];
+            var hezi = document.getElementsByClassName("hezi")[0];
+
+            for (var i = 0; i < li.length; i++) {
+                (function (j) {
+                    var shu = i + 1;
+                    // 鼠标进入事件
+                    li[j].onmouseenter = function (e) {
+                        picture.src = "src/shirt_" + shu + "_big.jpg";
+                        // picture.style.display = "block";
+                        var e = e || window.event;
+                        hezi.style.top = e.clientY + "px";
+                        hezi.style.left = e.clientX + "px";
+
+                    }
+                    // 鼠标离开事件
+                    li[j].onmouseleave = function () {
+                        picture.src = "";
+                        // picture.style.display = "none";
+                    }
+                    // 鼠标移动事件
+                    //     li[j].onmousemove = function (e) {
+                    //         var e = e || window.event;
+                    //         hezi.style.top = e.clientY + "px";
+                    //         hezi.style.left = e.clientX + "px";
+                    //     }
+                })(i);
+            }
+        }
+    </script>
+</body>
+
+</html>

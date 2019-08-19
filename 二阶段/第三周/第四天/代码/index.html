@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        .box{
+            width: 140px;
+            height: 122px;
+            border: 1px solid #eee;
+            position: relative;
+        }
+        img{
+            width: 100px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"><img src="img/bird.jpg" alt=""></div>
+    <script>
+
+        window.onload = function(){
+            var oDiv = document.getElementsByClassName("box")[0];
+            oDiv.onmousedown = function(e){
+                var e = e || window.event;
+                var offSetX = e.offsetX;
+                var offSetY = e.offsetY;
+               document.onmousemove = function(event){
+                    var event = event || window.event;
+                    var pageX = event.pageX;
+                    var pageY = event.pageY;
+                    console.log(offSetX);
+                    
+                    oDiv.style.left = pageX - offSetX + "px";
+                    oDiv.style.top = pageY - offSetY + "px";                    
+                }
+            }
+            // document.onmouseup = function(){
+            //     document.onmousemove = null
+            // }
+        }
+    </script>
+</body>
+</html>

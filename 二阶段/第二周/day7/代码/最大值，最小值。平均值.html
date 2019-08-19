@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [1, 2, 31, 3, 22, 4, 1213, 455, 21];
+        for (var i = 0, len = arr.length; i < len; i++) {
+            for (var j = 0, len = arr.length; j < len - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    // var a = 1;
+                    // var b = 2;
+                    // var c;
+                    // c = a;
+                    // a = b;
+                    // b = c;
+
+                    // console.log("交换两个数据",arr[j],arr[j+1]);
+                    /*交换两个数据的时候：引入第三个变量*/
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+
+                }
+                console.log("i = " + i + " j = " + j + " 数组 " + arr);
+            }
+        }
+
+        console.log(arr);
+        var len = arr.length;
+        var arr1 = arr.slice(0, 1);
+        var arr2 = arr.slice(len - 1, 1);
+        alert("最小值" + arr1);
+        alert("最大值" + arr2);
+        var res = arr.reduce(function (x, y, index, arr) {
+            console.log(x, y, index, arr);
+            return x + y;
+        })
+
+        console.log(res);
+        var pingjunzhi = res/length;
+        console.log(pingjunzhi);
+    </script>
+
+
+</body>
+
+</html>

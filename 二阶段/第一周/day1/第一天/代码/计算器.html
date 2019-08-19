@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="zhi1">
+    <input type="text" id="zhi2">
+    <button id="but1">+</button>
+    <button id="but2">-</button>
+    <button id="but3">*</button>
+    <button id="but4">/</button>
+    <button id="but5">%</button>
+    <div id="jieguo">计算结果：</div>
+    <script>
+        //定义每个变量，并且获取到每个ID，每个Id必须用引号括起来
+        var zhi1 = document.getElementById("zhi1");
+        var zhi2 = document.getElementById("zhi2");
+        var jia  = document.getElementById("but1");
+        var jian = document.getElementById("but2");
+        var cheng = document.getElementById("but3");
+        var chu = document.getElementById("but4");
+        var yu = document.getElementById("but5");
+        var jieguo = document.getElementById("jieguo");
+        // 给每个变量添加点击事件 .onclick  函数 function 
+        jia.onclick = function () {
+            var result = Number(zhi1.value) + Number(zhi2.value);
+            jieguo.innerHTML = "计算结果=" + result;
+            //
+        }
+        jian.onclick = function () {
+            var result = Number(zhi1.value) - Number(zhi2.value);
+            jieguo.innerHTML = "计算结果=" + result;
+        }
+        cheng.onclick = function () {
+            var result = Number(zhi1.value) * Number(zhi2.value);
+            jieguo.innerHTML = "计算结果=" + result;
+        }
+        chu.onclick = function () {
+            var result = Number(zhi1.value) / Number(zhi2.value);
+            jieguo.innerHTML = "计算结果=" + result;
+        }
+        yu.onclick = function () {
+            var result = Number(zhi1.value) % Number(zhi2.value);
+            jieguo.innerHTML = "计算结果=" + result;
+        }
+    </script>
+</body>
+
+</html>
